@@ -1,0 +1,7 @@
+h1{
+    color: red;
+}
+
+table, tr, th, td{
+    border: solid black 1px;
+}
