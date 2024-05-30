@@ -4,29 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'todolist/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'todolist/css/bootstrap.min.css' %}">
     <title>ToDo List</title>
 </head>
 <body>
     {% include 'todolist/header.html' %}
-    <h4>Ajouter Les taches</h4>
     {% include 'todolist/formulaire.html' %}
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>TACHES</th>
-            <th colspan="2">ACTIONS</th>
-        </tr>
-        {% for tache in taches %}
-        <tr>
-            <th>{{ tache.id }}</th>
-            <td>{{ tache.title }}</td>
-            <td><a href="{% url 'edit' tache.id %}">Modifier</a></td>
-            <td><a href="{% url 'delete' tache.id %}">Supprimer</a></td>
-        </tr>
-        {% endfor %}
+    <table class="container table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">TACHES</th>
+                <th scope="col" colspan="2">ACTIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tache in taches %}
+            <tr>
+                <th scope="row">{{ tache.title }}</th>
+                <td><a class="btn btn-primary" href="{% url 'edit' tache.id %}">Modifier</a></td>
+                <td><a class="btn btn-danger" href="{% url 'delete' tache.id %}">Supprimer</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
     {% include 'todolist/footer.html' %}
-    <script src="{% static 'todolist/css/style.css' %}"></script>
+    <script src="{% static 'todolist/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

@@ -1,21 +1,21 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'todolist/css/style.css' %}">
-    <title>ToDo List</title>
-</head>
-<body>
-    {% include 'todolist/header.html' %}
-    <h4>Ajouter Les taches</h4>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Modifier">
-    </form>
-    {% include 'todolist/footer.html' %}
-    <script src="{% static 'todolist/js/main.js' %}"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'todolist/css/bootstrap.min.css' %}">
+        <title>ToDo List</title>
+    </head>
+    <body>
+        {% include 'todolist/header.html' %}
+        <h3>Modifier la tâche</h3>
+        <form action="" method="post" class="container">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-success">Ajouter</button>
+        </form>
+        {% include 'todolist/footer.html' %}
+        <script src="{% static 'todolist/js/main.js' %}"></script>
+    </body>
 </html>

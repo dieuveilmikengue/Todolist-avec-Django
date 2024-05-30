@@ -8,5 +8,8 @@ class AddTask(forms.ModelForm):
         model = Taches
         fields = ['title']
         widgets = {
-            'title': forms.TextInput()
+            'title': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder':"Veuillez ajoutez une tache"
+            })
         }
