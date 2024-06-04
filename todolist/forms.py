@@ -6,10 +6,16 @@ from .models import Taches
 class AddTask(forms.ModelForm):
     class Meta:
         model = Taches
-        fields = ['title']
+        fields = ['title', 'description']
         widgets = {
             'title': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder':"Veuillez ajoutez une tache"
+                'class': '.input',
+                'placeholder':"Veuillez ajoutez une tache",
+                "spellcheck": "false"
+            }),
+            'description': forms.Textarea(attrs={
+                'class': '.textarea',
+                'placeholder':"Veuillez ajoutez une tache",
+                "spellcheck": "false"
             })
         }

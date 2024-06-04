@@ -11,7 +11,8 @@ def index(request):
         fm = AddTask(request.POST)
         if fm.is_valid():
             champ_title = fm.cleaned_data['title'] #On affecte les informations du champs qui seront supprimées après l'envoie
-            reg = Taches(title = champ_title) #On efface les données dans le formurmulaire après l'envoie
+            champ_description = fm.cleaned_data['description'] #On affecte les informations du champs qui seront supprimées après l'envoie
+            reg = Taches(title = champ_title, description = champ_description) #On efface les données dans le formurmulaire après l'envoie
             reg.save() #On enregistre les information dans la base des données
             fm = AddTask()
     else:
