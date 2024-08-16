@@ -13,7 +13,7 @@
         <form action="" method="post" class="container">
             {% csrf_token %}
             {{ form }}
-            <button type="submit" class="btn btn-success">Ajouter</button>
+            <button type="submit" class="btn btn-success">Modifier</button>
         </form>
         {% include 'todolist/footer.html' %}
         <script src="{% static 'todolist/js/main.js' %}"></script>
