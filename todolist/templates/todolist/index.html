@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="{% static 'todolist/css/bootstrap.min.css' %}"> -->
-    <link rel="stylesheet" href="{% static 'todolist/css/style.css' %}">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="{% static 'todolist/css/bootstrap.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'todolist/css/style.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
     <title>ToDo List</title>
 </head>
 <body>
-    <!-- {% include 'todolist/header.html' %} -->
-    <!-- {% include 'todolist/formulaire.html' %} -->
-    <!-- <table class="container table table-striped">
+    {% include 'todolist/header.html' %}
+    {% include 'todolist/formulaire.html' %}
+    <table class="container table table-striped">
         <thead>
             <tr>
                 <th scope="col">TACHES</th>
@@ -28,38 +28,7 @@
             </tr>
             {% endfor %}
         </tbody>
-    </table> -->
-    <!-- {% include 'todolist/footer.html' %} -->
-    <div class="popup-box">
-        <div class="popup">
-          <div class="content">
-            <header>
-              <p>Ajouter une Tache</p>
-              <i class="uil uil-times"></i>
-            </header>
-            <!-- <form action="#">
-              <div class="row title">
-                <label>Title</label>
-                <input type="text" spellcheck="false">
-              </div>
-              <div class="row description">
-                <label>Description</label>
-                <textarea spellcheck="false"></textarea>
-              </div>
-              <button></button>
-            </form> -->
-            {% include 'todolist/formulaire.html' %}
-          </div>
-        </div>
-    </div>
-    <div class="wrapper">
-        <li class="add-box">
-          <div class="icon"><i class="uil uil-plus"></i></div>
-          <p>Add new note</p>
-        </li>
-    </div>
-
-    <!-- <script src="{% static 'todolist/js/bootstrap.bundle.min.js' %}"></script> -->
-    <script src="{% static 'todolist/js/script.js' %}"></script>
+    </table>
+    {% include 'todolist/footer.html' %}
 </body>
 </html>
